@@ -1,0 +1,27 @@
+@font-face { font-family: "Fraunces Soft"; font-weight: 600; src: url("FrauncesSoft-SemiBold.ttf"); font-display: swap; }
+@font-face { font-family: "Fraunces Soft"; font-weight: 900; src: url("FrauncesSoft-Black.ttf"); font-display: swap; }
+:root { --paper: #F3E6C9; --card: #FBF4E4; --ink: #2A1C12; --sepia: #5F4A36; --sand: #CCA366; --faience: #226E6A; --bg: #E9D9B6; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1E1712; --paper: #D6C9AE; --card: #DDD0B4; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 24px 18px 48px; }
+nav { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; margin-bottom: 20px; font-weight: 600; }
+nav a { color: var(--ink); text-decoration: none; }
+nav a[aria-current] { text-decoration: underline 2px var(--faience); text-underline-offset: 4px; }
+nav .lang { margin-left: auto; color: var(--faience); }
+.card { background: var(--card); border: 2px solid var(--ink); border-radius: 14px; padding: 22px 24px; box-shadow: 3px 4px 0 rgba(42,28,18,.35); }
+h1, h2, h3 { font-family: "Fraunces Soft", Georgia, serif; line-height: 1.2; }
+h1 { font-weight: 900; font-size: 34px; margin: 0 0 6px; }
+h2 { font-weight: 600; font-size: 22px; margin: 26px 0 6px; }
+h3 { font-weight: 600; font-size: 18px; margin: 18px 0 4px; }
+p { margin: 0 0 10px; }
+.hero { display: flex; gap: 20px; align-items: center; margin-bottom: 14px; }
+.hero img { width: 96px; height: 96px; border-radius: 22px; border: 2px solid var(--ink); flex: none; }
+.tagline { color: var(--sepia); font-size: 19px; margin: 0; }
+.muted { color: var(--sepia); }
+a { color: var(--faience); }
+.mail { font-size: 20px; font-weight: 600; }
+footer { margin-top: 22px; font-size: 14px; color: var(--sepia); text-align: center; }
+@media (prefers-color-scheme: dark) { footer, nav a, nav .lang { color: var(--paper); } }
